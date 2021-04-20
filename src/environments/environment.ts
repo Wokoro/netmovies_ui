@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    projectId: process.env.PROJECT_ID,
-    storageBucket: process.env.STORAGE_BUCKET,
-    messagingSenderId: process.env.MESSAGING_SENDER_ID,
-    appId: process.env.APP_ID,
-    measurementId: process.env.MEASUREMENT_ID
+    apiKey: 'AIzaSyAHVsXNHX3v2nZda2JnK1XdV6r-78PTRtg',
+    authDomain: 'movies-project-796cf.firebaseapp.com',
+    projectId: 'movies-project-796cf',
+    storageBucket: 'movies-project-796cf.appspot.com',
+    messagingSenderId: '667777651759',
+    appId: '1:667777651759:web:fdc5acf1e8675e867ce2da',
+    measurementId: 'G-X3ZZEQ00MJ',
   }
 };
 
