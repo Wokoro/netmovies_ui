@@ -1,0 +1,5 @@
+<div class="holder" *ngFor="let modal of modals.reverse()">
+  <div class="{{modal.type}}" *ngFor="let message of modal.messages">
+      {{message}}
+  </div>
+</div>

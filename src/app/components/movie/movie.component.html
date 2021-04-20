@@ -1,0 +1,28 @@
+<div class="movie_holder">
+  <div class="hover">
+    <div class="body">
+      <div class="favorite_icon">
+          <fa-icon [icon]="icon" size="1x" (click)="click()" class='icon pulsate'></fa-icon>
+      </div>
+      <img [src]="movie.poster_url" alt="Holder">
+    </div>
+    <div class="extra_details">
+      <div class="duration">
+        Duration: <span class="value">{{movie.runtime}}</span>
+      </div>
+      <div class="genre">
+        Genre: <span class="value">{{movie.genre}}</span>
+      </div>
+      <div class="director">
+        Director: <span class="value">{{movie.director}}</span>
+      </div>
+      <div class="relased_date">
+        Released: <span class="value">{{movie.released }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="basic_info">
+    <span class="title">{{movie.title}}</span>
+    <span class="main_duration">movie.runtime</span>
+  </div>
+</div>

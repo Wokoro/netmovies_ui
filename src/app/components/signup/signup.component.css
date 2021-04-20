@@ -1,0 +1,118 @@
+.signup_holder{
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+.info{
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+}
+
+.login{
+  background-color: #ff0000;
+  padding: 5px 10px;
+  color: white;
+  font-size: 0.6em;
+}
+
+.title{
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.signup_btn{
+  padding: 10px 30px;
+  margin-top: 35px;
+}
+
+.signup_form{
+  margin-top: 40px;
+  width: 25%;
+  margin: auto;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.04);
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 275px;
+      border: 1px solid #0000000d;
+}
+
+.signup_form input[type="password"], input[type="text"], input[type="submit"], input[type="email"]{
+  width: 100%;
+  font-size: 1em;
+}
+
+input[type="text"], input[type="password"], input[type="email"]{
+  border: none;
+  border-bottom: 1px solid #DADADA;
+}
+
+input[type="text"]:focus, input[type="password"]:focus{
+  outline:none;
+}
+
+.require{
+  color: #F90000;
+  font-size: 0.8em;
+  display: inline-block;
+}
+.custom-radio{
+  width: 60px;
+}
+input::placeholder{
+  color: rgba(0, 0, 0, 0.35);
+}
+.custom-control-label::before{
+  width: 10px;
+  height: 10px;
+}
+
+.error{
+  background-color: #E3C3C5 !important;
+}
+
+.error_holder{
+  position: absolute;
+  margin-top: 0.7rem;
+  right: 0;
+}
+
+.input_holder{
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.md-form{
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.signup_form input[type="submit"]{
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.section_holder{
+  display: flex;
+  justify-content: space-between;
+  max-width: 340px;
+  margin: auto;
+}
+
+.gender{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 35px;
+}
+
+input{
+  border-bottom: 1px solid #c1bbbb29 !important;
+}
+
+.gender span{
+  padding-left: 5px;
+}

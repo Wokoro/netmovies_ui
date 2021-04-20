@@ -1,0 +1,44 @@
+<app-modal class="info" [modals]="modalList"></app-modal>
+
+<div class="signin_holder">
+  <h3 class="title">SIGNIN</h3>
+  <p>New to NetMovies <a mdbBtn type="submit" class="signup_btn" mdbWavesEffect routerLink="/signup">signup</a></p>
+
+  <form #signinForm="ngForm" (ngSubmit)="signIn(signinForm)" action="http://localhost:3000/api/v1/signin" method="POST"
+    class="signin_form" autocomplete="off" novalidate>
+    <div class="input_holder">
+      <div class="md-form">
+        <input (ngModel)="email" type="text" placeholder="Email" name="email" required>
+        <div class="error_holder">
+          <span
+            *ngIf="signinForm.controls.email?.invalid && (signinForm.controls.email?.touched || signinForm.submitted)"
+            class="require">
+            Required
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="input_holder">
+      <div class="md-form">
+        <input (ngModel)="password" type="password" name="password" placeholder="Password" required>
+        <div class="error_holder">
+          <span
+            *ngIf="signinForm.controls.password?.invalid && (signinForm.controls.password?.touched || signinForm.submitted)"
+            class="require">
+            Required
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="section_holder">
+      <div>
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember"> Remember me</label>
+      </div>
+      <span>Forgot password ?</span>
+    </div>
+    <span>
+      <button type="button" mdbBtn color="success" mdbWavesEffect type="submit" class="signin_btn">Signin</button>
+    </span>
+  </form>
+</div>

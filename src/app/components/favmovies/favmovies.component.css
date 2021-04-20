@@ -1,0 +1,32 @@
+.fluid-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hide{
+  display: none;
+}
+
+.movie_container {
+  width: 220px;
+  margin: 15px 10px;
+}
+
+h3 {
+  margin: 25px 0;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 350;
+  letter-spacing: 0.4em;
+}
+
+hr {
+  border-top: 1px solid rgba(249, 0, 0, 0.1);
+  width: 5%;
+}
+
+.no_content {
+  height: 100px;
+  color: red;
+}

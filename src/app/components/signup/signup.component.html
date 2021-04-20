@@ -1,0 +1,75 @@
+<app-modal class="info" [modals]="modalList"></app-modal>
+
+<div class="signup_holder">
+  <h3 class="title">SIGNUP</h3>
+  <p>Already have an account <a mdbBtn type="submit" class="login" mdbWavesEffect routerLink="/signin">login</a></p>
+  <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm)" autocomplete="off" novalidate
+    action="http://localhost:3000/api/v1/signup" method="POST" class="signup_form">
+    <div class="input_holder">
+      <div class="md-form">
+        <input mdbInput formControlName="name" name="name" type="text" id="form1" placeholder="Name" class="form-control">      </div>
+      <div class="error_holder">
+        <span *ngIf="!isValid(name) && signupForm.controls.name.errors.required"
+          class="require">
+          Required
+        </span>
+        <span *ngIf="!isValid(name) && signupForm.controls.name.errors.pattern" class="require">
+          Must start with a letter
+        </span>
+      </div>
+    </div>
+    <div class="input_holder">
+      <div class="md-form">
+        <input mdbInput formControlName="email" name="email" type="text" id="email" class="form-control" placeholder="Email">
+      </div>
+      <div class="error_holder">
+        <span *ngIf="!isValid(email) && signupForm.controls.email.errors.required" class="require">
+          Required
+        </span>
+        <span *ngIf="!isValid(email) && signupForm.controls.email.errors.pattern" class="require">
+          Invalid email
+        </span>
+      </div>
+    </div>
+    <div class="gender">
+      <div class="custom-radio">
+        <input type="radio" class="custom-control-input" id="male" name="gender" value="male" formControlName="gender"
+          mdbInput>
+        <label class="custom-control-label" for="male">Male</label>
+      </div>
+      <div class="custom-radio">
+        <input type="radio" class="custom-control-input" id="female" name="gender" value="female"
+          formControlName="gender" mdbInput>
+        <label class="custom-control-label" for="female">Female</label>
+
+      </div>
+    </div>
+    <div class="input_holder">
+      <div class="md-form">
+        <input mdbInput formControlName="password" name="password" type="password" id="password" class="form-control" placeholder="Password">
+      </div>
+      <div class="error_holder">
+        <span *ngIf="!isValid(password) && signupForm.controls.password.errors.required" class="require">
+          Required
+        </span>
+      </div>
+    </div>
+    <div class="input_holder">
+      <div class="md-form">
+        <input mdbInput formControlName="confirmPassword" name="confirmPassword" type="text" id="confirmPassword"
+          class="form-control" placeholder="Confirm password">
+      </div>
+      <div class="error_holder">
+        <span *ngIf="isValidConfirm(confirmPassword)" class="require">
+          Password mismatch
+        </span>
+        <span *ngIf="!isValid(confirmPassword) && signupForm.controls.confirmPassword.errors.required" class="require">
+          Required
+        </span>
+      </div>
+    </div>
+    <span>
+      <button type="button" mdbBtn color="success" mdbWavesEffect type="submit" class="signup_btn">Signup</button>
+    </span>
+  </form>
+</div>

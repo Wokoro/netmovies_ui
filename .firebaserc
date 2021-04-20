@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "movies-project-796cf": {
+      "hosting": {
+        "netflix-ui": [
+          "movies-project-796cf"
+        ]
+      }
+    }
+  }
+}

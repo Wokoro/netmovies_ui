@@ -1,0 +1,26 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark black ie-nav" [containerInside]="false">
+  <mdb-navbar-brand>
+      <a class="logo navbar-brand" routerLink="/home"><strong>NET<span class="fancy">MOVIES</span></strong></a>
+  </mdb-navbar-brand>
+  <links class="nav_bar">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active waves-light" mdbWavesEffect>
+              <a class="nav-link" routerLink="/home" routerLinkActive="active" >Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link" routerLink="/favorites" routerLinkActive="active">Favorites</a>
+          </li>
+      </ul>
+      <div class="group flex">
+          <a *ngIf="isLoggedIn" mdbBtn type="submit" class="custom_btn" mdbWavesEffect (click)="logout()">Logout</a>
+          <a *ngIf="!isLoggedIn" mdbBtn type="submit" class="custom_btn" mdbWavesEffect routerLink="/signin">Sign in</a>
+        <div class="md-form search_bar flex">
+          <input mdbInput type="text" id ="searchInput" class="form-control" placeholder="Search">
+          <div class="search_icon">
+            <fa-icon [icon]="search"></fa-icon>
+          </div>
+        </div>
+      </div>
+  </links>
+</mdb-navbar>
+

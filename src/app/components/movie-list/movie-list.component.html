@@ -1,0 +1,14 @@
+<!-- <app-modal class="info" [modals]="modalList"></app-modal> -->
+
+<div class="title_section">
+  <hr>
+  <h3>MOVIES</h3>
+  <hr>
+</div>
+
+<div class="app-container movies_holder">
+  <div class="fluid-display">
+    <app-movie *ngFor="let movie of movies | async" class="movie_container" [movie]="movie">
+    </app-movie>
+  </div>
+</div>

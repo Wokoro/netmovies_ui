@@ -1,0 +1,13 @@
+<div class="title_section">
+  <hr>
+  <h3>FAVORITES</h3>
+  <hr>
+</div>
+<div class="app-container movies_holder">
+  <div class="fluid-display" *ngIf="favoriteMovies? favoriteMovies.length > 0 : false">
+    <app-movie *ngFor = "let movie of favoriteMovies" class="movie_container" [movie]="movie"></app-movie>
+  </div>
+  <div class="fluid-display no_content" *ngIf="favoriteMovies? favoriteMovies.length === 0 : true">
+    NO FAVORITE MOVIES
+  </div>
+</div>

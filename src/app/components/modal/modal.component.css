@@ -1,0 +1,33 @@
+.error{
+  background-color: #d60000;;
+}
+
+.success{
+  background-color: green;
+}
+
+.error, .success{
+  margin-top: 5px;
+  color: white;
+  width: 100%;
+  padding: 10px 20px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  -webkit-animation: 4s;
+  animation: 4s;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+@-webkit-keyframes move_eye { from { display: block } to {display: none }}
+@keyframes move_eye {from {display: block} to { display: none}  }
+
+.holder{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 60px;
+}
